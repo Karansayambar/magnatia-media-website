@@ -226,7 +226,7 @@ const SwipeCardCarousel = () => {
 
       <div
         ref={containerRef}
-        className="relative mx-auto max-w-4xl lg:max-w-[1600px] lg:w-[80%] h-[420px] sm:h-[480px] md:h-[540px] lg:h-[600px] cursor-grab active:cursor-grabbing"
+        className="relative mx-auto max-w-4xl lg:max-w-[1600px] lg:w-[80%] h-[420px] sm:h-[480px] md:h-[540px] lg:h-[800px] cursor-grab active:cursor-grabbing"
         onMouseDown={handleStart}
         onMouseMove={handleMove}
         onMouseUp={handleEnd}
@@ -239,10 +239,10 @@ const SwipeCardCarousel = () => {
           <div
             key={`${card.originalIndex}-${currentIndex}`}
             ref={(el) => (cardsRef.current[index] = el)}
-            className={`absolute inset-0 rounded-2xl md:rounded-3xl rounded-tr-[120px] border border-gray-700 overflow-hidden ${card.color}`}
+            className={`absolute inset-0 rounded-2xl md:rounded-tr-[200px] border border-gray-700 overflow-hidden ${card.color}  `}
             style={{ transformStyle: "preserve-3d" }}
           >
-            <div className="flex flex-col sm:flex-row h-full">
+            <div className="flex flex-col sm:flex-row h-fullrounded-tr-[120px]">
               <div className="flex-1 p-6 md:p-10 flex flex-col justify-between">
                 <h3 className="text-[clamp(1.2rem,2vw,2rem)] font-bold mb-2">
                   {card.title}
@@ -262,7 +262,7 @@ const SwipeCardCarousel = () => {
                 <img
                   src={card.img}
                   alt={card.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover rounded-tr-[200px]"
                 />
               </div>
             </div>
