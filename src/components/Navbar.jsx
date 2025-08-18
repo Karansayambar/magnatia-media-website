@@ -5,9 +5,10 @@ import { IoMdClose } from "react-icons/io";
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
-  const [isOverDark, setIsOverDark] = useState(false);
+  const [activeSection, setActiveSection] = useState(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
+  // Responsive state for mobile/desktop
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
@@ -20,22 +21,39 @@ const Navbar = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Intersection Observer for multiple sections
   useEffect(() => {
-    const ourWorkSection = document.getElementById("ourwork");
-    if (!ourWorkSection) return;
+    const sectionIds = ["ourwork", "projects", "blog", "career", "contact"];
+    const observers = [];
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          setIsOverDark(entry.isIntersecting);
-        });
-      },
-      { threshold: 0.3 }
-    );
+    sectionIds.forEach((id) => {
+      const section = document.getElementById(id);
+      if (!section) return;
 
-    observer.observe(ourWorkSection);
-    return () => observer.disconnect();
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setActiveSection(id);
+            }
+          });
+        },
+        { threshold: 0.3 }
+      );
+
+      observer.observe(section);
+      observers.push(observer);
+    });
+
+    return () => {
+      observers.forEach((observer) => observer.disconnect());
+    };
   }, []);
+
+  // Define which sections should have white text
+  const isOverDark = ["projects", "blog", "career", "contact"].includes(
+    activeSection
+  );
 
   const handleToggleMenu = () => {
     setToggleMenu((prev) => !prev);
@@ -94,7 +112,7 @@ const Navbar = () => {
               onClick={() => handleMenuItemClick(item.id)}
               className={`font-medium hover:opacity-80 transition ${
                 isOverDark ? "text-white" : "text-black"
-              }`}
+              } ${activeSection === item.id ? "underline" : ""}`}
             >
               {item.label}
             </button>
@@ -102,10 +120,10 @@ const Navbar = () => {
         </div>
       )}
 
-      {/* Mobile Menu Button */}
+      {/* Mobile Menu Button + Dropdown */}
       <div className="flex items-center gap-2 md:gap-4 relative">
         <button
-          onClick={handleToggleMenu}
+          onClick={() => handleMenuItemClick("contact")}
           className={`border-2 rounded-full px-4 py-2 md:px-6 md:py-3 text-sm md:text-base transition
             ${
               isOverDark

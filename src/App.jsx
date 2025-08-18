@@ -1,7 +1,6 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 
-// Lazy load all components except Navbar (since it's needed immediately)
 const HeroWebGL = lazy(() => import("./components/HeroWebGL"));
 const Hero = lazy(() => import("./components/Hero"));
 const Services = lazy(() => import("./components/Services"));
@@ -13,6 +12,36 @@ const Contact = lazy(() => import("./components/Contact"));
 const Footer = lazy(() => import("./components/Footer"));
 
 function App() {
+  const [activeSection, setActiveSection] = useState(null);
+
+  useEffect(() => {
+    const sectionIds = ["projects", "blog", "career", "contact"];
+    const observers = [];
+
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setActiveSection(id); // set current visible section
+            }
+          });
+        },
+        { threshold: 0.3 }
+      );
+
+      observer.observe(el);
+      observers.push(observer);
+    });
+
+    return () => {
+      observers.forEach((observer) => observer.disconnect());
+    };
+  }, []);
+
   return (
     <>
       <Suspense fallback={<div className="fixed inset-0 bg-black z-0" />}>
@@ -33,7 +62,9 @@ function App() {
       </Suspense>
 
       <main style={{ position: "relative", zIndex: 10 }}>
-        <Navbar />
+        {/* 👇 Pass activeSection to Navbar */}
+        <Navbar activeSection={activeSection} />
+
         <Suspense fallback={<div className="min-h-screen" />}>
           <section id="about">
             <Hero />
@@ -66,7 +97,7 @@ function App() {
 
         <Suspense fallback={null}>
           <section id="career">
-            <Sectors /> {/* or another section you want for Career */}
+            <Sectors />
           </section>
         </Suspense>
 

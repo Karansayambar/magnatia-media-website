@@ -216,7 +216,9 @@ const SwipeCardCarousel = () => {
   return (
     <div className="bg-black min-h-screen py-16 px-4 sm:px-6 md:px-8 lg:px-16 text-white">
       <div className="mx-auto max-w-6xl text-center mb-12 lg:w-[80%]">
-        <h1 className="text-[clamp(2rem,6vw,5rem)] font-bold mb-4">Sectors</h1>
+        <h1 className="text-[clamp(2rem,6vw,5rem)] lg:text-[130px] mb-4 font-space-poppins">
+          Sectors
+        </h1>
         <p className="uppercase tracking-widest text-gray-400 text-[clamp(0.8rem,2vw,1.2rem)]">
           To whom we provide creative solutions!
         </p>

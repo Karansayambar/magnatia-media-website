@@ -18,9 +18,12 @@ const Blogs = () => {
   ];
 
   return (
-    <div className="px-4 sm:px-6 md:px-12 lg:px-20 xl:px-40 py-16 sm:py-24 lg:py-32 bg-black text-white">
+    <div
+      id="blog"
+      className="px-4 sm:px-6 md:px-12 lg:px-20 xl:px-40 py-16 sm:py-24 lg:py-32 bg-black text-white"
+    >
       {/* Heading */}
-      <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-12 sm:mb-20 lg:mb-32 text-center md:text-left">
+      <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-12 sm:mb-20 lg:mb-32 text-center md:text-left lg:text-[150px] font-space-poppins">
         Latest Articles
       </h1>
 
