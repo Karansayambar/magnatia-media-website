@@ -16,32 +16,32 @@ const SwipeCardCarousel = () => {
       title: "ISI GLOBAL",
       stat: "104.9%",
       description: "Increase in organic visits after 1 month",
-      gradient: "from-purple-600 to-pink-600",
-      bgColor: "bg-gradient-to-br from-purple-900/20 to-pink-900/20",
+      color: "bg-purple-700",
+      textColor: "text-purple-600",
       img: placeholderImg,
     },
     {
       title: "DIGITAL MARKETING",
       stat: "87.3%",
       description: "Increase in conversion rates",
-      gradient: "from-blue-600 to-cyan-600",
-      bgColor: "bg-gradient-to-br from-blue-900/20 to-cyan-900/20",
+      color: "bg-blue-700",
+      textColor: "text-blue-600",
       img: placeholderImg,
     },
     {
       title: "BRANDING SOLUTIONS",
       stat: "62.5%",
       description: "Higher brand recognition",
-      gradient: "from-emerald-600 to-teal-600",
-      bgColor: "bg-gradient-to-br from-emerald-900/20 to-teal-900/20",
+      color: "bg-emerald-700",
+      textColor: "text-emerald-600",
       img: placeholderImg,
     },
     {
       title: "WEB DEVELOPMENT",
       stat: "95.2%",
       description: "Client satisfaction rate",
-      gradient: "from-orange-600 to-red-600",
-      bgColor: "bg-gradient-to-br from-orange-900/20 to-red-900/20",
+      color: "bg-orange-700",
+      textColor: "text-orange-600",
       img: placeholderImg,
     },
   ];
@@ -215,7 +215,7 @@ const SwipeCardCarousel = () => {
 
   return (
     <div className="bg-black min-h-screen py-16 px-4 sm:px-6 md:px-8 lg:px-16 text-white">
-      <div className="mx-auto max-w-6xl text-center mb-12">
+      <div className="mx-auto max-w-6xl text-center mb-12 lg:w-[80%]">
         <h1 className="text-[clamp(2rem,6vw,5rem)] font-bold mb-4">Sectors</h1>
         <p className="uppercase tracking-widest text-gray-400 text-[clamp(0.8rem,2vw,1.2rem)]">
           To whom we provide creative solutions!
@@ -224,7 +224,7 @@ const SwipeCardCarousel = () => {
 
       <div
         ref={containerRef}
-        className="relative mx-auto max-w-4xl h-[420px] sm:h-[480px] md:h-[540px] lg:h-[600px] cursor-grab active:cursor-grabbing"
+        className="relative mx-auto max-w-4xl lg:max-w-[1600px] lg:w-[80%] h-[420px] sm:h-[480px] md:h-[540px] lg:h-[600px] cursor-grab active:cursor-grabbing"
         onMouseDown={handleStart}
         onMouseMove={handleMove}
         onMouseUp={handleEnd}
@@ -237,7 +237,7 @@ const SwipeCardCarousel = () => {
           <div
             key={`${card.originalIndex}-${currentIndex}`}
             ref={(el) => (cardsRef.current[index] = el)}
-            className={`absolute inset-0 rounded-2xl md:rounded-3xl rounded-tr-[120px] border border-gray-700 overflow-hidden ${card.bgColor}`}
+            className={`absolute inset-0 rounded-2xl md:rounded-3xl rounded-tr-[120px] border border-gray-700 overflow-hidden ${card.color}`}
             style={{ transformStyle: "preserve-3d" }}
           >
             <div className="flex flex-col sm:flex-row h-full">
@@ -247,7 +247,7 @@ const SwipeCardCarousel = () => {
                 </h3>
                 <div>
                   <div
-                    className={`text-[clamp(2rem,5vw,5rem)] font-bold bg-gradient-to-r ${card.gradient} bg-clip-text text-transparent mb-2`}
+                    className={`text-[clamp(2rem,5vw,5rem)] font-bold ${card.textColor} mb-2`}
                   >
                     {card.stat}
                   </div>
@@ -269,25 +269,25 @@ const SwipeCardCarousel = () => {
       </div>
 
       {/* Buttons */}
-      <div className="flex justify-center gap-4 mt-10">
+      <div className="flex justify-center gap-4 mt-10 lg:w-[80%] mx-auto">
         <button
           onClick={goToPrevious}
           disabled={isAnimating}
-          className="px-6 py-3 rounded-full bg-gradient-to-r from-gray-800 to-gray-700 hover:from-gray-700 hover:to-gray-600 border border-gray-600 transition-all duration-300 hover:scale-105"
+          className="px-6 py-3 rounded-full bg-gray-800 hover:bg-gray-700 border border-gray-600 transition-all duration-300 hover:scale-105"
         >
           ← Previous
         </button>
         <button
           onClick={goToNext}
           disabled={isAnimating}
-          className="px-6 py-3 rounded-full bg-gradient-to-r from-gray-800 to-gray-700 hover:from-gray-700 hover:to-gray-600 border border-gray-600 transition-all duration-300 hover:scale-105"
+          className="px-6 py-3 rounded-full bg-gray-800 hover:bg-gray-700 border border-gray-600 transition-all duration-300 hover:scale-105"
         >
           Next →
         </button>
       </div>
 
       {/* Indicators */}
-      <div className="flex justify-center mt-6 gap-2">
+      <div className="flex justify-center mt-6 gap-2 lg:w-[80%] mx-auto">
         {cards.map((_, idx) => (
           <span
             key={idx}

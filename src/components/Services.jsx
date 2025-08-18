@@ -187,7 +187,7 @@ const Services = () => {
           <div
             key={index}
             ref={(el) => (cardsRef.current[index] = el)}
-            className="absolute flex flex-col lg:flex-row top-0 left-1/2 transform -translate-x-1/2 w-full md:w-[90%] h-auto md:min-h-[500px] bg-gray-100 
+            className="absolute flex flex-col lg:flex-row top-0 left-1/2 transform -translate-x-1/2 w-full md:w-[90%] h-auto md:min-h-[40px] bg-gray-100 
             rounded-2xl md:rounded-3xl lg:rounded-[3.5rem] overflow-hidden z-10 shadow-lg"
           >
             {/* Text Section */}

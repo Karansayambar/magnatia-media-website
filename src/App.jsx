@@ -47,6 +47,12 @@ function App() {
         </Suspense>
 
         <Suspense fallback={null}>
+          <section id="Strategically">
+            <Strategically />
+          </section>
+        </Suspense>
+
+        <Suspense fallback={null}>
           <section id="projects">
             <OurWork />
           </section>
@@ -67,6 +73,12 @@ function App() {
         <Suspense fallback={null}>
           <section id="contact">
             <Contact />
+          </section>
+        </Suspense>
+
+        <Suspense fallback={null}>
+          <section id="footer">
+            <Footer />
           </section>
         </Suspense>
       </main>
