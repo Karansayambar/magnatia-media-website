@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const cardsData = [
   {
-    title: "Web design & development",
+    title: "Web design , development",
     services: [
       "Creative Web Design",
       "Web Development",
