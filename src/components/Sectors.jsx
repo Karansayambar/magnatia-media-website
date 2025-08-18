@@ -226,7 +226,7 @@ const SwipeCardCarousel = () => {
 
       <div
         ref={containerRef}
-        className="relative mx-auto max-w-4xl lg:max-w-[1600px] lg:w-[80%] h-[420px] sm:h-[480px] md:h-[540px] lg:h-[800px] cursor-grab active:cursor-grabbing"
+        className="relative mx-auto max-w-4xl lg:max-w-[1600px] lg:w-[80%] h-[420px] sm:h-[480px] md:h-[540px] lg:h-[600px] cursor-grab active:cursor-grabbing"
         onMouseDown={handleStart}
         onMouseMove={handleMove}
         onMouseUp={handleEnd}
