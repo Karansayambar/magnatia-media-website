@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&display=swap");
+
+.webgl-background_container__Ojc1v {
+  pointer-events: none; /* ensure underlying elements receive pointer events */
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure the canvas fills the container precisely */
+.webgl-background_container__Ojc1v canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  object-fit: cover;
+}
+
+@layer base {
+  .font-space-mono {
+    font-family: "Space Mono", monospace;
+  }
+  .font-space-Mozilla {
+    /* font-family: "Inconsolata", monospace; */
+    font-family: "Mozilla Headline", sans-serif;
+  }
+  .font-space-Roboto {
+    font-family: "Roboto", sans-serif;
+  }
+  .font-space-poppins {
+    font-family: "Poppins", sans-serif;
+  }
+  .font-space-Montserrat {
+    font-family: "Montserrat", sans-serif;
+  }
+  .font-space-Libertinus {
+    font-family: "Libertinus Sans", sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-expanded {
+    font-stretch: expanded;
+  }
+}
