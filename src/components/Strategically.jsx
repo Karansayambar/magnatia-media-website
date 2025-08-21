@@ -6,10 +6,10 @@ const steps = [
   {
     id: 1,
     number: "01/",
-    title: "Design with guts.",
+    title: "Designd with guts.",
     img: mockImg,
     description:
-      "We build immersive, brand-led digital experiences that wow and work hard. The kind that raises eyebrows, sparks emotion, and moves people to act.",
+      "Immersive experiences that wow while working hard; and tugs at heartstrings; just enough to move your audience to act.",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const steps = [
     title: "Strategy creativity.",
     img: mockImg,
     description:
-      "Our approach blends sharp strategy with standout creativity, ensuring your brand not only looks great but performs exceptionally.",
+      "Taking the road less travelled, but with sharp strategy and standout creativity; ensuring that your brand gets the spotlight it deserves.",
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ const steps = [
     title: "Build for the future.",
     img: mockImg,
     description:
-      "We develop scalable, future-proof solutions designed to grow with your brand and adapt to an ever-changing digital landscape.",
+      "We develop scalable, future-ready solutions designed to grow with your brand and adapt to an ever-changing digital landscape.",
   },
 ];
 
@@ -124,7 +124,7 @@ const Strategically = () => {
       {/* Header Section */}
       <div className="max-w-6xl mx-auto my-20 md:my-40">
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[110px] font-space-poppins text-center leading-[1.1] md:leading-[110px] tracking-tighter text-gray-900">
-          Brand-led. Strategically built.
+          Brand-led, Strategically built, Engineered for Impact.
         </h1>
       </div>
 

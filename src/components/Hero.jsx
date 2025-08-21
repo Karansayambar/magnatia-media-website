@@ -50,35 +50,31 @@
 //         ref={heroRef}
 //         className="relative z-10 flex flex-col items-center justify-center h-full px-6 text-center text-black"
 //       >
-//         <div className="w-full space-x-auto space-y-6 px-30 py-20 flex ">
-//           <div className="max-w-400 flex-8 p-0 m-0 ">
+//         <div className="w-full space-x-auto space-y-6 px-30 py-20 flex items-center justify-center">
+//           <div className="w-[100%] p-0 m-0">
 //             <div>
-//               <p className="heading-text text-4xl sm:text-5xl md:text-[14rem] tracking-wide font-medium  text-center font-space-Mozilla p-0 m-0 h-40">
-//                 Unlock
+//               <p className="heading-text text-4xl sm:text-5xl md:text-[14rem] lg:text-[18rem] font-bold tracking-wide  text-left font-space-Mozilla p-0 m-0 h-60">
+//                 Magnify
 //               </p>
 //             </div>
 //             <div>
-//               <p className="heading-text text-4xl sm:text-5xl md:text-[14rem] tracking-wide font-medium  font-space-Mozilla h-40">
+//               <p className="heading-text text-4xl sm:text-5xl md:text-[14rem] lg:text-[18rem] tracking-wide font-bold  font-space-Mozilla h-60">
 //                 Your
 //               </p>
 //             </div>
-//             <div>
-//               <p className="heading-text text-4xl sm:text-5xl md:text-[14rem] tracking-wide font-medium  font-space-Mozilla h-40">
-//                 Brand
+//             <div className="flex gap-20 items-center">
+//               <p className="heading-text text-4xl sm:text-5xl md:text-[14rem] lg:text-[18rem] tracking-wide font-bold  font-space-Mozilla h-60">
+//                 Brand's
 //               </p>
+//               <div className="flex sm:flex-row md:flex-col gap-4 items-end justify-end h-50 w-120">
+//                 <p className="text-lg sm:text-2xl md:text-3xl text-gray-900 text-start font-space-Roboto">
+//                   <strong>
+//                     From Vision to Visibility- evolving brand stories to
+//                     standout success projects.
+//                   </strong>
+//                 </p>
+//               </div>
 //             </div>
-//             <div className="">
-//               <p className="heading-text font-space-Mozilla text-4xl tracking-wide sm:text-5xl font-medium md:text-[14rem] h-40">
-//                 Potential
-//               </p>
-//             </div>
-//           </div>
-//           <div className="flex sm:flex-row md:flex-col gap-4 items-end justify-end h-50 w-120">
-//             <p className="text-lg sm:text-2xl text-gray-900 text-start font-space-Roboto">
-//               Tap into a world where billions engage, purchase, and follow,
-//               elevating your brand to new heights in the
-//               <strong> thriving social marketplace.</strong>
-//             </p>
 //           </div>
 //         </div>
 //       </div>
@@ -211,22 +207,21 @@ export default function Hero() {
 
       {/* Content container */}
       <div className="relative z-10 container mx-auto px-6 py-20 mt-20">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-8xl mx-auto">
           {/* Subheading */}
-          <h2 className="sub-heading font-mono text-sm md:text-lg tracking-widest  text-blue-800 uppercase mb-4">
+          <h2 className="sub-heading font-mono text-sm md:text-lg lg:text-2xl tracking-widest  text-blue-800 uppercase mb-4">
             Digital Innovation
           </h2>
 
           {/* Main heading */}
-          <h1 className="main-heading text-5xl sm:text-6xl md:text-7xl lg:text-[160px] font-bold tracking-tight font-space-Mozilla text-black mb-6">
-            Unfold Your Brand's Potetial!
+          <h1 className="main-heading text-5xl sm:text-6xl md:text-7xl lg:text-[13rem] font-bold tracking-tight font-space-Mozilla text-gray-900 mb-6">
+            Magnify your brand's Potential
           </h1>
 
           {/* Description */}
-          <p className="description text-lg md:text-2xl text-gray-700 mb-10 max-w-2xl leading-relaxed">
-            Tap into a world where billions engage, purchase, and follow,
-            elevating your brand to new heights in the{" "}
-            <strong>thriving social marketplace</strong>.
+          <p className="description text-lg md:text-3xl text-gray-700 mb-10 max-w-4xl leading-relaxed">
+            From Vision to <strong>Visibility- evolving</strong> brand stories
+            to standout success projects.
           </p>
 
           {/* CTA button */}

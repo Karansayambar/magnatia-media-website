@@ -99,7 +99,7 @@ const Navbar = () => {
             isOverDark ? "text-white" : "text-black"
           }`}
         >
-          Magnetia Media
+          Magnatia Media
         </p>
       </div>
 

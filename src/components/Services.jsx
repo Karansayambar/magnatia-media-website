@@ -10,20 +10,21 @@ gsap.registerPlugin(ScrollTrigger);
 
 const cardsData = [
   {
-    title: "Web design , development",
+    title: "Web Design & Development.",
     services: [
       "Creative Web Design",
       "Web Development",
       "E-Commerce",
       "WordPress",
+      "Shopify",
     ],
-    desc: "Crafting digital experiences where beauty meets ROI, turning heads and unlocking revenue potential with every click.",
+    desc: "Crafting digital worlds where beauty meets functionality; hits become ROI and every click generates revenue potential.",
     video: video,
   },
   {
     title: "Mobile App Development",
     services: ["iOS Apps", "Android Apps", "Cross-Platform", "UI/UX Design"],
-    desc: "Building mobile solutions that captivate, engage, and convert your audience on the go.",
+    desc: "Building optimised solutions which engage, facilitate and convert your target audience, with no holds barred mobility.",
     video: video,
   },
   {
@@ -34,7 +35,7 @@ const cardsData = [
       "Marketing Strategy",
       "Content Creation",
     ],
-    desc: "We craft brands that stand out, resonate, and build loyalty through meaningful connections.",
+    desc: "We craft brands that stand out, yet resonate enough to forge a loyal audience.",
     video: video,
   },
 ];
@@ -182,16 +183,16 @@ const Services = () => {
       </div>
 
       {/* Cards Container */}
-      <div className="relative w-full h-[70%] md:h-full mt-10 md:mt-0">
+      <div className="relative w-[80%] min-h-[70%] md:h-full mx-auto mt-10 md:mt-40">
         {cardsData.map((card, index) => (
           <div
             key={index}
             ref={(el) => (cardsRef.current[index] = el)}
-            className="absolute flex flex-col lg:flex-row top-0 left-1/2 transform -translate-x-1/2 w-full md:w-[90%] h-auto md:min-h-[40px] bg-gray-100 
+            className="absolute flex flex-col lg:flex-row top-0 left-1/2 transform -translate-x-1/2 w-full md:w-[90%] h-auto  bg-gray-100 
             rounded-2xl md:rounded-3xl lg:rounded-[3.5rem] overflow-hidden z-10 shadow-lg"
           >
             {/* Text Section */}
-            <div className="flex-1 p-6 sm:p-8 md:p-10 lg:p-20 order-2 lg:order-1">
+            <div className="flex-1 p-6 sm:p-8 md:p-10 lg:p-20 order-2 lg:order-1 h-[650px]">
               <p className="text-2xl sm:text-3xl md:text-4xl lg:text-[3.5rem] xl:text-[110px] mb-4 sm:mb-6 md:mb-8 font-space-montserrat font-light leading-tight">
                 {card.title}
               </p>
