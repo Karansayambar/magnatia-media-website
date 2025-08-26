@@ -224,12 +224,12 @@ const Services = () => {
       </div>
 
       {/* Cards Container */}
-      <div className="relative lg:w-[90%] min-h-180 lg:min-h-[75%] mx-auto mt-0 md:mt-40">
+      <div className="relative lg:w-[90%] min-h-180 lg:min-h-[80%] mx-auto mt-0 md:mt-30">
         {cardsData.map((card, index) => (
           <div
             key={index}
             ref={(el) => (cardsRef.current[index] = el)}
-            className="absolute flex flex-col lg:flex-row top-0 left-1/2 transform -translate-x-1/2 w-full h-full md:w-[90%]  bg-gray-100 
+            className="absolute flex flex-col lg:flex-row top-0 left-1/2 transform -translate-x-1/2 w-full h-200 lg:h-full md:w-[90%]  bg-gray-100 
             rounded-2xl md:rounded-3xl lg:rounded-[3.5rem] overflow-hidden z-10 shadow-lg"
           >
             {/* Text Section */}
@@ -257,7 +257,7 @@ const Services = () => {
             </div>
 
             {/* Video Section */}
-            <div className="flex-1 flex items-center justify-center p-4 sm:p-6 md:p-10 order-1 h-200 lg:w-[40%] lg:order-2">
+            <div className="flex-1 flex items-center justify-center p-4 sm:p-6 md:p-10 order-1 h-full lg:w-[40%] lg:order-2">
               <video
                 src={card.video}
                 autoPlay
