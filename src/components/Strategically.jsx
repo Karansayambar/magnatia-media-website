@@ -1,13 +1,15 @@
 import { useState, useRef, useEffect } from "react";
 import { gsap } from "gsap";
-import mockImg from "../assets/creative-web-design.webp";
+import design from "../assets/design.jpg";
+import build from "../assets/build-a-future.jpg";
+import Strategy from "../assets/strategy.jpg";
 
 const steps = [
   {
     id: 1,
     number: "01/",
-    title: "Designd with guts.",
-    img: mockImg,
+    title: "Design with guts.",
+    img: design,
     description:
       "Immersive experiences that wow while working hard; and tugs at heartstrings; just enough to move your audience to act.",
   },
@@ -15,7 +17,7 @@ const steps = [
     id: 2,
     number: "02/",
     title: "Strategy creativity.",
-    img: mockImg,
+    img: Strategy,
     description:
       "Taking the road less travelled, but with sharp strategy and standout creativity; ensuring that your brand gets the spotlight it deserves.",
   },
@@ -23,7 +25,7 @@ const steps = [
     id: 3,
     number: "03/",
     title: "Build for the future.",
-    img: mockImg,
+    img: build,
     description:
       "We develop scalable, future-ready solutions designed to grow with your brand and adapt to an ever-changing digital landscape.",
   },

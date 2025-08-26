@@ -209,12 +209,12 @@ export default function Hero() {
       <div className="relative z-10 container mx-auto px-6 py-20 mt-20">
         <div className="max-w-8xl mx-auto">
           {/* Subheading */}
-          <h2 className="sub-heading font-mono text-sm md:text-lg lg:text-2xl tracking-widest  text-blue-800 uppercase mb-4">
+          <h2 className="sub-heading font-mono text-md md:text-lg lg:text-2xl tracking-widest  text-blue-800 uppercase mb-4">
             Digital Innovation
           </h2>
 
           {/* Main heading */}
-          <h1 className="main-heading text-5xl sm:text-6xl md:text-7xl lg:text-[13rem] font-bold tracking-tight font-space-Mozilla text-gray-900 mb-6">
+          <h1 className="main-heading text-7xl sm:text-6xl md:text-7xl lg:text-[13rem] font-bold tracking-tight font-space-Mozilla text-gray-900 mb-6">
             Magnify your brand's Potential
           </h1>
 

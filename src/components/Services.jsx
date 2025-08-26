@@ -3,7 +3,12 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { BiRightArrowAlt } from "react-icons/bi";
 import { HiOutlineArrowSmallLeft } from "react-icons/hi2";
-import video from "../assets/homepage.mp4";
+import webDevelopment from "../assets/web Development.mp4";
+import brand from "../assets/brand.mp4";
+import markting from "../assets/markting.mp4";
+import social from "../assets/Social.mp4";
+import content from "../assets/Content.mp4";
+
 import "../index.css";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -19,24 +24,60 @@ const cardsData = [
       "Shopify",
     ],
     desc: "Crafting digital worlds where beauty meets functionality; hits become ROI and every click generates revenue potential.",
-    video: video,
+    video: webDevelopment,
   },
+  // {
+  //   title: "Mobile App Development",
+  //   services: ["iOS Apps", "Android Apps", "Cross-Platform", "UI/UX Design"],
+  //   desc: "Building optimised solutions which engage, facilitate and convert your target audience, with no holds barred mobility.",
+  //   video: mobileDevelopment,
+  // },
   {
-    title: "Mobile App Development",
-    services: ["iOS Apps", "Android Apps", "Cross-Platform", "UI/UX Design"],
-    desc: "Building optimised solutions which engage, facilitate and convert your target audience, with no holds barred mobility.",
-    video: video,
-  },
-  {
-    title: "Branding",
+    title: "Brand Strategy & Identity",
     services: [
       "Logo Design",
       "Brand Identity",
       "Marketing Strategy",
       "Content Creation",
     ],
-    desc: "We craft brands that stand out, yet resonate enough to forge a loyal audience.",
-    video: video,
+    desc: "We build and refine brands with a strategic approach, combining creativity and consistency to craft memorable identities. From naming to logos, guidelines, and messaging, we align every element with your brand’s core values, ensuring long-term growth and audience connection.",
+    video: brand,
+  },
+  {
+    title: "Digital Marketing",
+    services: [
+      "Digital Campaigns",
+      "SEO & SEM",
+      "Social Media Strategy",
+      "Email & Influencer Marketing",
+    ],
+    desc: "Targeted and data-driven strategies to boost visibility, engage audiences, and drive conversions, delivering cohesive and impactful results across digital platforms.",
+    video: markting,
+  },
+  {
+    title: "Social Media & Communications",
+    services: [
+      "Social Media Management",
+      "Community Engagement & Moderation",
+      "Social Media Advertising",
+      "Influencer Partnership",
+      "Social Analytics ",
+    ],
+    desc: "Strategic and creative approaches to amplify brand presence, foster engagement, and build connections through tailored content and unified messaging.",
+    video: social,
+  },
+  {
+    title: "Content Creation & Production",
+    services: [
+      "Content Strategy",
+      "Blog & Article Writing",
+      "Video Production & Editing",
+      "Graphic Design & Visual Assets",
+      "Photography Editing",
+      "Podcast Production",
+    ],
+    desc: "Engaging and impactful content strategies designed to captivate audiences, drive conversions, and maximize value through diverse formats and performance-driven insights.",
+    video: content,
   },
 ];
 
@@ -163,14 +204,14 @@ const Services = () => {
     >
       {/* Header Row */}
       <div
-        className="flex flex-col md:flex-row items-center md:items-end justify-between mb-8 md:mb-0"
+        className="flex flex-col md:flex-row items-center md:items-end justify-between lg:mb-8 md:mb-0"
         ref={servicesRef}
       >
         <div className="w-full md:w-auto text-center md:text-left">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] xl:text-[10rem] uppercase font-space-poppins leading-tight">
+          <h1 className="text-6xl md:text-6xl lg:text-[5rem] xl:text-[10rem] uppercase font-space-poppins leading-tight">
             our
           </h1>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] xl:text-[10rem] uppercase font-space-poppins leading-tight md:text-right">
+          <h1 className="text-6xl md:text-6xl lg:text-[5rem] xl:text-[10rem] uppercase font-space-poppins leading-tight md:text-right">
             services
           </h1>
         </div>
@@ -183,17 +224,17 @@ const Services = () => {
       </div>
 
       {/* Cards Container */}
-      <div className="relative w-[80%] min-h-[70%] md:h-full mx-auto mt-10 md:mt-40">
+      <div className="relative lg:w-[80%] min-h-180 lg:min-h-[75%] mx-auto mt-0 md:mt-40">
         {cardsData.map((card, index) => (
           <div
             key={index}
             ref={(el) => (cardsRef.current[index] = el)}
-            className="absolute flex flex-col lg:flex-row top-0 left-1/2 transform -translate-x-1/2 w-full md:w-[90%] h-auto  bg-gray-100 
+            className="absolute flex flex-col lg:flex-row top-0 left-1/2 transform -translate-x-1/2 w-full h-full md:w-[90%]  bg-gray-100 
             rounded-2xl md:rounded-3xl lg:rounded-[3.5rem] overflow-hidden z-10 shadow-lg"
           >
             {/* Text Section */}
-            <div className="flex-1 p-6 sm:p-8 md:p-10 lg:p-20 order-2 lg:order-1 h-[650px]">
-              <p className="text-2xl sm:text-3xl md:text-4xl lg:text-[3.5rem] xl:text-[110px] mb-4 sm:mb-6 md:mb-8 font-space-montserrat font-light leading-tight">
+            <div className="flex-1 p-6 sm:p-8 md:p-10 lg:p-20 order-2 lg:order-1 h-[650px] lg:w-[60%] object-cover">
+              <p className="text-2xl sm:text-3xl md:text-4xl lg:text-[3.5rem] xl:text-[90px] mb-4 sm:mb-6 md:mb-8 font-space-montserrat font-light leading-tight">
                 {card.title}
               </p>
               <div className="flex gap-2 sm:gap-3 md:gap-4 flex-wrap mb-4 md:mb-6">
@@ -216,14 +257,14 @@ const Services = () => {
             </div>
 
             {/* Video Section */}
-            <div className="flex-1 flex items-center justify-center p-4 sm:p-6 md:p-10 order-1 lg:order-2">
+            <div className="flex-1 flex items-center justify-center p-4 sm:p-6 md:p-10 order-1 h-200 lg:w-[40%] lg:order-2">
               <video
                 src={card.video}
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="rounded-lg md:rounded-xl lg:rounded-tr-[5rem] xl:rounded-tr-[10rem] object-cover w-full h-[200px] sm:h-[250px] md:h-[300px] lg:h-full"
+                className="rounded-lg md:rounded-xl lg:rounded-tr-[5rem] xl:rounded-tr-[10rem] object-cover w-full h-[250px] sm:h-[250px] md:h-[200px] lg:h-full"
               ></video>
             </div>
           </div>

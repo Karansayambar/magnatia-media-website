@@ -1,4 +1,4 @@
-import { BsDribbble, BsTwitter } from "react-icons/bs";
+import { BsDribbble, BsFacebook, BsThreads, BsTwitter } from "react-icons/bs";
 import { ImInstagram } from "react-icons/im";
 import { LiaLinkedin } from "react-icons/lia";
 
@@ -54,7 +54,7 @@ const Footer = () => {
             {/* Brand Section */}
             <div className="lg:col-span-2 space-y-6">
               <h3 className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                MAGNETIA MEDIA
+                Magnatia Media Pvt. Ltd.
               </h3>
               <p className="text-gray-300 text-lg leading-relaxed">
                 Creating digital experiences that inspire, engage, and drive
@@ -121,30 +121,30 @@ const Footer = () => {
                     name: "LinkedIn",
                     color: "hover:text-blue-400",
                     icon: <LiaLinkedin />,
-                    link: "",
+                    link: "https://www.linkedin.com/company/magnatiamedia/",
                   },
                   {
-                    name: "Twitter",
+                    name: "Facebook",
                     color: "hover:text-sky-400",
-                    icon: <BsTwitter />,
-                    link: "",
+                    icon: <BsFacebook />,
+                    link: "https://www.facebook.com/people/Magnatia-Media-Pvt-Ltd/61572407098443/",
                   },
                   {
                     name: "Instagram",
                     color: "hover:text-pink-400",
                     icon: <ImInstagram />,
-                    link: "",
+                    link: "https://www.instagram.com/magnatiamedia/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D#",
                   },
                   {
-                    name: "Dribbble",
+                    name: "Threads",
                     color: "hover:text-purple-400",
-                    icon: <BsDribbble />,
-                    link: "",
+                    icon: <BsThreads />,
+                    link: "https://www.threads.com/web/?waterfall_id=e186dbc9-43a3-4c96-93aa-8a8856a5f077",
                   },
                 ].map((social) => (
                   <a
                     key={social.name}
-                    href="#"
+                    href={social.link}
                     className={`w-10 h-10 rounded-full border border-gray-600 hover:border-gray-400 transition-all duration-300 hover:scale-110 flex items-center justify-center text-gray-400 ${social.color}`}
                   >
                     {social.icon}

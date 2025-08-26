@@ -72,7 +72,7 @@ const Navbar = () => {
     { id: "services", label: "Services" },
     { id: "projects", label: "Projects" },
     { id: "blog", label: "Blog" },
-    { id: "career", label: "Career" },
+    { id: "sectors", label: "Sectors" },
     { id: "contact", label: "Contact" },
   ];
 

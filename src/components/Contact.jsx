@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { BsFacebook, BsThreads } from "react-icons/bs";
+import { ImInstagram } from "react-icons/im";
+import { LiaLinkedin } from "react-icons/lia";
 
 // Contact Component
 const Contact = () => {
@@ -43,19 +46,19 @@ const Contact = () => {
     {
       icon: "📧",
       title: "Email",
-      content: "hello@yourcompany.com",
+      content: "kunal@magnatiamedia.com , ganesh@magnatiamedia.com",
       subtitle: "We respond within 24 hours",
     },
     {
       icon: "📱",
       title: "Phone",
-      content: "+1 (555) 123-4567",
+      content: "+91 738 7333 401",
       subtitle: "Mon-Fri, 9AM-6PM EST",
     },
     {
       icon: "📍",
       title: "Office",
-      content: "123 Creative Street, Design City",
+      content: "Mumbai | Pune | Ahmedabad | Vadodara | Nagpur",
       subtitle: "Visit us for a coffee chat",
     },
   ];
@@ -223,24 +226,40 @@ const Contact = () => {
             <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm rounded-2xl border border-gray-700/50 p-8">
               <h4 className="text-xl font-bold text-white mb-6">Follow Us</h4>
               <div className="flex space-x-4">
-                {["LinkedIn", "Twitter", "Instagram", "Dribbble"].map(
-                  (social, index) => (
-                    <button
-                      key={social}
-                      className={`w-12 h-12 rounded-full border-2 border-gray-600 hover:border-purple-500 transition-all duration-300 hover:scale-110 flex items-center justify-center text-gray-400 hover:text-white ${
-                        index === 0
-                          ? "hover:bg-blue-600"
-                          : index === 1
-                          ? "hover:bg-sky-500"
-                          : index === 2
-                          ? "hover:bg-pink-600"
-                          : "hover:bg-purple-600"
-                      }`}
-                    >
-                      {social.charAt(0)}
-                    </button>
-                  )
-                )}
+                {[
+                  {
+                    name: "LinkedIn",
+                    color: "hover:text-blue-400",
+                    icon: <LiaLinkedin />,
+                    link: "https://www.linkedin.com/company/magnatiamedia/",
+                  },
+                  {
+                    name: "Facebook",
+                    color: "hover:text-sky-400",
+                    icon: <BsFacebook />,
+                    link: "https://www.facebook.com/people/Magnatia-Media-Pvt-Ltd/61572407098443/",
+                  },
+                  {
+                    name: "Instagram",
+                    color: "hover:text-pink-400",
+                    icon: <ImInstagram />,
+                    link: "https://www.instagram.com/magnatiamedia/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D#",
+                  },
+                  {
+                    name: "Threads",
+                    color: "hover:text-purple-400",
+                    icon: <BsThreads />,
+                    link: "https://www.threads.com/web/?waterfall_id=e186dbc9-43a3-4c96-93aa-8a8856a5f077",
+                  },
+                ].map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.link}
+                    className={`w-10 h-10 rounded-full border border-gray-600 hover:border-gray-400 transition-all duration-300 hover:scale-110 flex items-center justify-center text-gray-400 ${social.color}`}
+                  >
+                    {social.icon}
+                  </a>
+                ))}
               </div>
             </div>
           </div>

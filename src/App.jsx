@@ -1,4 +1,6 @@
+// App.js
 import { lazy, Suspense, useEffect, useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 
 const HeroWebGL = lazy(() => import("./components/HeroWebGL"));
@@ -8,6 +10,7 @@ const Strategically = lazy(() => import("./components/Strategically"));
 const OurWork = lazy(() => import("./components/OurWork"));
 const Sectors = lazy(() => import("./components/Sectors"));
 const Blogs = lazy(() => import("./components/Blogs"));
+const BlogDetails = lazy(() => import("./components/BlogDetails"));
 const Contact = lazy(() => import("./components/Contact"));
 const Footer = lazy(() => import("./components/Footer"));
 
@@ -26,7 +29,7 @@ function App() {
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              setActiveSection(id); // set current visible section
+              setActiveSection(id);
             }
           });
         },
@@ -43,7 +46,7 @@ function App() {
   }, []);
 
   return (
-    <>
+    <Router>
       <Suspense fallback={<div className="fixed inset-0 bg-black z-0" />}>
         <HeroWebGL
           style={{
@@ -62,59 +65,86 @@ function App() {
       </Suspense>
 
       <main style={{ position: "relative", zIndex: 10 }}>
-        {/* 👇 Pass activeSection to Navbar */}
         <Navbar activeSection={activeSection} />
 
-        <Suspense fallback={<div className="min-h-screen" />}>
-          <section id="about">
-            <Hero />
-          </section>
-        </Suspense>
-
-        <Suspense fallback={null}>
-          <section id="services">
-            <Services />
-          </section>
-        </Suspense>
-
-        <Suspense fallback={null}>
-          <section id="Strategically">
-            <Strategically />
-          </section>
-        </Suspense>
-
-        <Suspense fallback={null}>
-          <section id="projects">
-            <OurWork />
-          </section>
-        </Suspense>
-
-        <Suspense fallback={null}>
-          <section id="blog">
-            <Blogs />
-          </section>
-        </Suspense>
-
-        <Suspense fallback={null}>
-          <section id="career">
-            <Sectors />
-          </section>
-        </Suspense>
-
-        <Suspense fallback={null}>
-          <section id="contact">
-            <Contact />
-          </section>
-        </Suspense>
-
-        <Suspense fallback={null}>
-          <section id="footer">
-            <Footer />
-          </section>
-        </Suspense>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route
+            path="/blog-details/:articleId"
+            element={<BlogDetailsPage />}
+          />
+        </Routes>
       </main>
-    </>
+    </Router>
   );
 }
+
+// HomePage component to structure the main page
+const HomePage = () => {
+  return (
+    <>
+      <Suspense fallback={<div className="min-h-screen" />}>
+        <section id="about">
+          <Hero />
+        </section>
+      </Suspense>
+
+      <Suspense fallback={null}>
+        <section id="services">
+          <Services />
+        </section>
+      </Suspense>
+
+      <Suspense fallback={null}>
+        <section id="Strategically">
+          <Strategically />
+        </section>
+      </Suspense>
+
+      <Suspense fallback={null}>
+        <section id="projects">
+          <OurWork />
+        </section>
+      </Suspense>
+
+      <Suspense fallback={null}>
+        <section id="blog">
+          <Blogs />
+        </section>
+      </Suspense>
+
+      <Suspense fallback={null}>
+        <section id="career">
+          <Sectors />
+        </section>
+      </Suspense>
+
+      <Suspense fallback={null}>
+        <section id="contact">
+          <Contact />
+        </section>
+      </Suspense>
+
+      <Suspense fallback={null}>
+        <Footer />
+      </Suspense>
+    </>
+  );
+};
+
+// BlogDetailsPage component
+const BlogDetailsPage = () => {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen flex items-center justify-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
+        </div>
+      }
+    >
+      <BlogDetails />
+    </Suspense>
+  );
+};
 
 export default App;
