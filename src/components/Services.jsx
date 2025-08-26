@@ -224,7 +224,7 @@ const Services = () => {
       </div>
 
       {/* Cards Container */}
-      <div className="relative lg:w-[80%] min-h-180 lg:min-h-[75%] mx-auto mt-0 md:mt-40">
+      <div className="relative lg:w-[90%] min-h-180 lg:min-h-[75%] mx-auto mt-0 md:mt-40">
         {cardsData.map((card, index) => (
           <div
             key={index}
@@ -234,7 +234,7 @@ const Services = () => {
           >
             {/* Text Section */}
             <div className="flex-1 p-6 sm:p-8 md:p-10 lg:p-20 order-2 lg:order-1 h-[650px] lg:w-[60%] object-cover">
-              <p className="text-2xl sm:text-3xl md:text-4xl lg:text-[3.5rem] xl:text-[90px] mb-4 sm:mb-6 md:mb-8 font-space-montserrat font-light leading-tight">
+              <p className="text-2xl sm:text-3xl md:text-4xl lg:text-[3.5rem] xl:text-[80px] mb-4 sm:mb-6 md:mb-8 font-space-montserrat font-light leading-tight">
                 {card.title}
               </p>
               <div className="flex gap-2 sm:gap-3 md:gap-4 flex-wrap mb-4 md:mb-6">
