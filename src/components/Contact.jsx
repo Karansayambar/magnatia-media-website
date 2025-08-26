@@ -53,7 +53,7 @@ const Contact = () => {
       icon: "📱",
       title: "Phone",
       content: "+91 738 7333 401",
-      subtitle: "Mon-Fri, 9AM-6PM EST",
+      subtitle: "Mon-Sat, 9AM-6PM EST",
     },
     {
       icon: "📍",
