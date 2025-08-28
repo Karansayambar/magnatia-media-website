@@ -200,11 +200,11 @@ const Services = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative h-[150vh] md:h-screen bg-transparent overflow-hidden px-4 sm:px-6 md:px-10 lg:px-20 py-10 md:py-20"
+      className="relative  md:h-screen bg-transparent overflow-hidden px-4 sm:px-6 md:px-10 lg:px-20 py-10 md:py-20"
     >
       {/* Header Row */}
       <div
-        className="flex flex-col md:flex-row items-center md:items-end justify-between lg:mb-8 md:mb-0"
+        className="flex flex-col md:flex-row items-center md:items-end justify-between mb-0 lg:mb-8"
         ref={servicesRef}
       >
         <div className="w-full md:w-auto text-center md:text-left">
@@ -229,12 +229,12 @@ const Services = () => {
           <div
             key={index}
             ref={(el) => (cardsRef.current[index] = el)}
-            className="absolute flex flex-col lg:flex-row top-0 left-1/2 transform -translate-x-1/2 w-full h-200 lg:h-full md:w-[90%]  bg-gray-100 
+            className="absolute flex flex-col lg:flex-row top-0 left-1/2 transform -translate-x-1/2 w-full h-150 lg:h-full md:w-[90%]  bg-gray-100 
             rounded-2xl md:rounded-3xl lg:rounded-[3.5rem] overflow-hidden z-10 shadow-lg"
           >
             {/* Text Section */}
             <div className="flex-1 p-6 sm:p-8 md:p-10 lg:p-20 order-2 lg:order-1 h-[650px] lg:w-[60%] object-cover">
-              <p className="text-2xl sm:text-3xl md:text-4xl lg:text-[3.5rem] xl:text-[80px] mb-4 sm:mb-6 md:mb-8 font-space-montserrat font-light leading-tight">
+              <p className="text-2xl sm:text-3xl md:text-4xl lg:text-[3.5rem] xl:text-[80px] mb-2 md:mb-8 font-space-montserrat font-light leading-tight">
                 {card.title}
               </p>
               <div className="flex gap-2 sm:gap-3 md:gap-4 flex-wrap mb-4 md:mb-6">
@@ -257,14 +257,14 @@ const Services = () => {
             </div>
 
             {/* Video Section */}
-            <div className="flex-1 flex items-center justify-center p-4 sm:p-6 md:p-10 order-1 h-full lg:w-[40%] lg:order-2">
+            <div className="flex-1 flex items-center justify-center p-1 md:p-10 order-1 lg:w-[40%] lg:order-2">
               <video
                 src={card.video}
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="rounded-lg md:rounded-xl lg:rounded-tr-[5rem] xl:rounded-tr-[10rem] object-cover w-full h-[250px] sm:h-[250px] md:h-[200px] lg:h-full"
+                className="rounded-lg md:rounded-xl lg:rounded-tr-[5rem] xl:rounded-tr-[10rem] object-cover w-[90%] h-[250px] sm:h-[200px] md:h-[200px] lg:h-full"
               ></video>
             </div>
           </div>

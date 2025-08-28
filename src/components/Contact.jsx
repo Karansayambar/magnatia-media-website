@@ -151,11 +151,16 @@ const Contact = () => {
                     onChange={handleInputChange}
                     className="w-full bg-gray-800/50 border border-gray-600 rounded-xl px-4 py-4 text-white focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300"
                   >
-                    <option value="">Project Type</option>
+                    <option value="">Select Project Type</option>
+                    <option value="digital-marketing">Digital Marketing</option>
                     <option value="web-design">Web Design</option>
                     <option value="mobile-app">Mobile App</option>
                     <option value="branding">Branding</option>
                     <option value="ecommerce">E-commerce</option>
+                    <option value="telecalling">Telecalling</option>
+                    <option value="end-to-end-handling">
+                      End-to-End Project Handling
+                    </option>
                     <option value="other">Other</option>
                   </select>
                 </div>
@@ -166,11 +171,11 @@ const Contact = () => {
                   onChange={handleInputChange}
                   className="w-full bg-gray-800/50 border border-gray-600 rounded-xl px-4 py-4 text-white focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300"
                 >
-                  <option value="">Budget Range</option>
-                  <option value="5k-10k">$5K - $10K</option>
-                  <option value="10k-25k">$10K - $25K</option>
-                  <option value="25k-50k">$25K - $50K</option>
-                  <option value="50k+">$50K+</option>
+                  <option value="">Select Budget Range</option>
+                  <option value="below-40k">Below ₹40K</option>
+                  <option value="40k-1lakh">₹40K – ₹1 Lakh</option>
+                  <option value="1lakh-3lakh">₹1 Lakh – ₹3 Lakh</option>
+                  <option value="above-3lakh">Above ₹3 Lakh</option>
                 </select>
 
                 <textarea

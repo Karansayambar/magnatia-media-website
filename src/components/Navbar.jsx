@@ -68,9 +68,10 @@ const Navbar = () => {
   };
 
   const navItems = [
+    { id: "home", label: "Home" },
     { id: "about", label: "About" },
     { id: "services", label: "Services" },
-    { id: "projects", label: "Projects" },
+    // { id: "owr-work", label: "Projects" },
     { id: "blog", label: "Blog" },
     { id: "sectors", label: "Sectors" },
     { id: "contact", label: "Contact" },
@@ -84,7 +85,7 @@ const Navbar = () => {
       {/* Logo & Brand */}
       <div className="flex items-center gap-2 md:gap-4">
         <div
-          className={`border-4 w-12 h-12 md:w-16 md:h-16 rounded-md overflow-hidden ${
+          className={`border-4 w-14 h-14 md:w-16 md:h-16 rounded-md overflow-hidden ${
             isOverDark ? "border-white" : "border-black"
           }`}
         >
@@ -124,7 +125,7 @@ const Navbar = () => {
       <div className="flex items-center gap-2 md:gap-4 relative">
         <button
           onClick={() => handleMenuItemClick("contact")}
-          className={`border-2 rounded-full px-4 py-2 md:px-6 md:py-3 text-sm md:text-base transition
+          className={`border-2 w-28 md:w-full rounded-full px-4 py-2 md:px-6 md:py-3 text-sm md:text-base transition
             ${
               isOverDark
                 ? "text-black bg-white hover:bg-gray-100"

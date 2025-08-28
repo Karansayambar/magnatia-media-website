@@ -385,11 +385,11 @@ const SwipeCardCarousel = () => {
     >
       {/* Header Row */}
       <div
-        className="flex flex-col md:flex-row items-center md:items-end justify-between mb-8 md:mb-0 p-20"
+        className="flex flex-col md:flex-row items-center md:items-end justify-between mb-8 md:mb-0  py-10 lg:p-20"
         ref={sectorRef}
       >
         <div className="w-full md:w-auto text-center md:text-left">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] xl:text-[10rem] uppercase font-space-poppins leading-tight md:text-right">
+          <h1 className="text-6xl sm:text-6xl md:text-6xl lg:text-[5rem] xl:text-[10rem] uppercase font-space-poppins leading-tight md:text-right">
             Sectors
           </h1>
           <p className="uppercase tracking-widest text-gray-400 text-[clamp(0.8rem,2vw,1.2rem)]">
@@ -419,7 +419,7 @@ const SwipeCardCarousel = () => {
           <div
             key={`${card.originalIndex}-${currentIndex}`}
             ref={(el) => (cardsRef.current[index] = el)}
-            className={`absolute inset-0 rounded-2xl md:rounded-tr-[200px] max-w-400 border border-gray-700 overflow-hidden  `}
+            className={`absolute inset-0 rounded-tr-[120px] md:rounded-tr-[200px] max-w-400 border border-gray-700 overflow-hidden  `}
             style={{ transformStyle: "preserve-3d" }}
           >
             <div
@@ -440,18 +440,20 @@ const SwipeCardCarousel = () => {
                   </p>
                 </div>
               </div>
-              <div
-                className={`w-full sm:w-1/2 h-40 sm:h-full ${card.rightColor}`}
-              >
-                <img
-                  src={card.img}
-                  alt={card.title}
-                  className={` object-cover rounded-tr-[200px] ${
-                    card.title === "OTHER BUSINESSES"
-                      ? "h-[100%]"
-                      : "w-full h-full"
-                  }`}
-                />
+              <div className="sm:w-full md:w-1/2 bg-black flex items-center justify-center">
+                <div
+                  className={`w-1/2 md:w-full h-40 sm:h-full ${card.rightColor}`}
+                >
+                  <img
+                    src={card.img}
+                    alt={card.title}
+                    className={` object-cover rounded-tr-[200px] ${
+                      card.title === "OTHER BUSINESSES"
+                        ? "h-[100%]"
+                        : "w-full h-full"
+                    }`}
+                  />
+                </div>
               </div>
             </div>
           </div>

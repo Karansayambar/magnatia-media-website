@@ -84,7 +84,7 @@ const HomePage = () => {
   return (
     <>
       <Suspense fallback={<div className="min-h-screen" />}>
-        <section id="about">
+        <section id="home">
           <Hero />
         </section>
       </Suspense>
@@ -96,16 +96,16 @@ const HomePage = () => {
       </Suspense>
 
       <Suspense fallback={null}>
-        <section id="Strategically">
+        <section id="about">
           <Strategically />
         </section>
       </Suspense>
 
-      <Suspense fallback={null}>
+      {/* <Suspense fallback={null}>
         <section id="projects">
           <OurWork />
         </section>
-      </Suspense>
+      </Suspense> */}
 
       <Suspense fallback={null}>
         <section id="blog">
@@ -114,7 +114,7 @@ const HomePage = () => {
       </Suspense>
 
       <Suspense fallback={null}>
-        <section id="career">
+        <section id="sectors">
           <Sectors />
         </section>
       </Suspense>
