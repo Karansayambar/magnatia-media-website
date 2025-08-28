@@ -384,7 +384,7 @@ const Strategically = () => {
                 ref={(el) => (titleRefs.current[step.id] = el)}
                 className="flex-1 mt-12 lg:mt-0 lg:max-w-2xl xl:max-w-3xl z-20"
               >
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-[120px] font-medium text-black opacity-70 hover:opacity-100 tracking-tighter font-space-poppins">
+                <h2 className="text-4xl mb-2 sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-[120px] font-medium text-black opacity-70 hover:opacity-100 tracking-tighter font-space-poppins">
                   {step.title}
                 </h2>
               </div>
@@ -403,25 +403,26 @@ const Strategically = () => {
               </div> */}
               <div
                 ref={(el) => (imgRefs.current[step.id] = el)}
-                className="
-    md:absolute 
-    md:top-1/2 
-    md:left-1/2 
-    md:transform 
-    md:-translate-x-1/2 
-    md:-translate-y-1/2 
-    z-10 
-    opacity-0 
-    scale-95 
-    pointer-events-none 
-    w-full 
-    md:w-[300px] 
-    md:h-[300px] 
-    lg:w-[500px] 
-    lg:h-[500px] 
-    h-auto 
-    mb-6
-  "
+                //               className="
+                //   md:absolute
+                //   md:top-1/2
+                //   md:left-1/2
+                //   md:transform
+                //   md:-translate-x-1/2
+                //   md:-translate-y-1/2
+                //   z-10
+                //   opacity-0
+                //   scale-95
+                //   pointer-events-none
+                //   w-full
+                //   md:w-[300px]
+                //   md:h-[300px]
+                //   lg:w-[400px]
+                //   lg:h-[400px]
+                //   h-auto
+                //   mb-6
+                // "
+                className="md:absolute md:top-1/2 md:left-1/2 z-10 opacity-0 scale-95 pointer-events-none w-auto h-auto sm:w-[250px] sm:h-[250px] md:w-[300px] md:h-[300px] lg:h-[500px] lg:w-[500px]"
               >
                 <img
                   src={step.img}

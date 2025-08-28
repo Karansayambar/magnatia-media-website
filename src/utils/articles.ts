@@ -358,3 +358,71 @@ export const articles = [
     `,
   },
 ];
+
+// import webDevelopment from "../assets/web Development.mp4";
+// import brand from "../assets/brand.mp4";
+// import markting from "../assets/markting.mp4";
+// import social from "../assets/Social.mp4";
+// import content from "../assets/Content.mp4";
+
+// export const cardsData = [
+//   {
+//     title: "Web Design & Development.",
+//     services: [
+//       "Creative Web Design",
+//       "Web Development",
+//       "E-Commerce",
+//       "WordPress",
+//       "Shopify",
+//     ],
+//     desc: "Crafting digital worlds where beauty meets functionality; hits become ROI and every click generates revenue potential.",
+//     video: webDevelopment,
+//   },
+//   {
+//     title: "Brand Strategy & Identity",
+//     services: [
+//       "Logo Design",
+//       "Brand Identity",
+//       "Marketing Strategy",
+//       "Content Creation",
+//     ],
+//     desc: "We build and refine brands with a strategic approach, combining creativity and consistency to craft memorable identities. From naming to logos, guidelines, and messaging, we align every element with your brand’s core values, ensuring long-term growth and audience connection.",
+//     video: brand,
+//   },
+//   {
+//     title: "Digital Marketing",
+//     services: [
+//       "Digital Campaigns",
+//       "SEO & SEM",
+//       "Social Media Strategy",
+//       "Email & Influencer Marketing",
+//     ],
+//     desc: "Targeted and data-driven strategies to boost visibility, engage audiences, and drive conversions, delivering cohesive and impactful results across digital platforms.",
+//     video: markting,
+//   },
+//   {
+//     title: "Social Media & Communications",
+//     services: [
+//       "Social Media Management",
+//       "Community Engagement & Moderation",
+//       "Social Media Advertising",
+//       "Influencer Partnership",
+//       "Social Analytics ",
+//     ],
+//     desc: "Strategic and creative approaches to amplify brand presence, foster engagement, and build connections through tailored content and unified messaging.",
+//     video: social,
+//   },
+//   {
+//     title: "Content Creation & Production",
+//     services: [
+//       "Content Strategy",
+//       "Blog & Article Writing",
+//       "Video Production & Editing",
+//       "Graphic Design & Visual Assets",
+//       "Photography Editing",
+//       "Podcast Production",
+//     ],
+//     desc: "Engaging and impactful content strategies designed to captivate audiences, drive conversions, and maximize value through diverse formats and performance-driven insights.",
+//     video: content,
+//   },
+// ];
