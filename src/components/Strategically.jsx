@@ -279,6 +279,7 @@ const Strategically = () => {
 
     gsap.to(imgRefs.current[id], {
       autoAlpha: 0,
+      top: 1,
       scale: 0.75,
       duration: 0.4,
       ease: "power3.out",
@@ -381,7 +382,7 @@ const Strategically = () => {
               {/* Title */}
               <div
                 ref={(el) => (titleRefs.current[step.id] = el)}
-                className="flex-1 mt-12 lg:mt-0 lg:max-w-2xl xl:max-w-4xl z-20"
+                className="flex-1 mt-12 lg:mt-0 lg:max-w-2xl xl:max-w-3xl z-20"
               >
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-[120px] font-medium text-black opacity-70 hover:opacity-100 tracking-tighter font-space-poppins">
                   {step.title}
@@ -389,10 +390,38 @@ const Strategically = () => {
               </div>
 
               {/* Floating Image */}
-              <div
+              {/* <div
                 ref={(el) => (imgRefs.current[step.id] = el)}
                 className="absolute top-1/2 left-1/2 z-10 opacity-0 scale-95 pointer-events-none w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] md:w-[300px] md:h-[300px] lg:h-[500px] lg:w-[500px]"
                 style={{ transform: "translate(-50%, -50%)" }}
+              >
+                <img
+                  src={step.img}
+                  alt="creative"
+                  className="w-full h-full object-cover shadow-2xl rounded-lg"
+                />
+              </div> */}
+              <div
+                ref={(el) => (imgRefs.current[step.id] = el)}
+                className="
+    md:absolute 
+    md:top-1/2 
+    md:left-1/2 
+    md:transform 
+    md:-translate-x-1/2 
+    md:-translate-y-1/2 
+    z-10 
+    opacity-0 
+    scale-95 
+    pointer-events-none 
+    w-full 
+    md:w-[300px] 
+    md:h-[300px] 
+    lg:w-[500px] 
+    lg:h-[500px] 
+    h-auto 
+    mb-6
+  "
               >
                 <img
                   src={step.img}
