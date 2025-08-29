@@ -2,6 +2,7 @@
 import { lazy, Suspense, useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import useScrollRestoration from "./hooks/useScrollRestoration";
 
 const HeroWebGL = lazy(() => import("./components/HeroWebGL"));
 const Hero = lazy(() => import("./components/Hero"));
@@ -15,6 +16,8 @@ const Contact = lazy(() => import("./components/Contact"));
 const Footer = lazy(() => import("./components/Footer"));
 
 function App() {
+  useScrollRestoration(); // ✅ restore scroll on reload
+
   const [activeSection, setActiveSection] = useState(null);
 
   useEffect(() => {
