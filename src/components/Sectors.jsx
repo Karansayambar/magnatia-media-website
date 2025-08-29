@@ -389,7 +389,7 @@ const SwipeCardCarousel = () => {
 
   return (
     <div
-      className="bg-black min-h-screen py-26 px-4 sm:px-6 md:px-8 lg:px-16 text-white overflow-hidden "
+      className="bg-black min-h-screen py-26 md:py-10 px-4 sm:px-6 md:px-8 lg:px-16 text-white overflow-hidden "
       ref={sectionRef}
     >
       {/* Header Row */}
@@ -401,7 +401,7 @@ const SwipeCardCarousel = () => {
           <h1 className="text-6xl sm:text-6xl md:text-6xl lg:text-[5rem] xl:text-[10rem] uppercase font-space-poppins leading-tight md:text-right">
             Sectors
           </h1>
-          <p className="uppercase tracking-widest text-gray-400 text-[clamp(0.8rem,2vw,1.2rem)]">
+          <p className="uppercase tracking-widest text-gray-400 text-[clamp(0.8rem,2vw,1.4rem)] md:px-4">
             To whom we provide creative solutions!
           </p>
         </div>
@@ -448,7 +448,7 @@ const SwipeCardCarousel = () => {
                 <img
                   src={card.img}
                   alt={card.title}
-                  className="w-full h-full object-cover rounded-tr-[100px]"
+                  className="h-60 w-60 md:w-full md:h-full object-cover rounded-tr-[100px]"
                 />
               </div>
             </div>
@@ -457,7 +457,7 @@ const SwipeCardCarousel = () => {
       </div>
 
       {/* Buttons */}
-      <div className="flex justify-center gap-4 mt-40 lg:w-[80%] mx-auto">
+      <div className="flex justify-center gap-4 mt-20 lg:w-[80%] mx-auto">
         <button
           onClick={goToPrevious}
           disabled={isAnimating}
