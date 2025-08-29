@@ -389,7 +389,7 @@ const SwipeCardCarousel = () => {
 
   return (
     <div
-      className="bg-black min-h-screen py-26 md:py-10 px-4 sm:px-6 md:px-8 lg:px-16 text-white overflow-hidden "
+      className="bg-gradient-to-br from-slate-950 via-slate-950 to-slate-900 text-white py-20 px-8 relative overflow-hidden min-h-screen md:py-10 sm:px-6 md:px-8 lg:px-16"
       ref={sectionRef}
     >
       {/* Header Row */}
