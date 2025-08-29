@@ -403,7 +403,7 @@ export default function Hero() {
         {/* Enhanced Decorative Elements */}
         <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
           {/* Premium geometric shapes */}
-          <div className="decorator absolute top-1/4 left-10 w-24 h-24 border-2 border-blue-400/40 rounded-3xl rotate-45 opacity-0 transition-all duration-1000 scale-75 parallax-light backdrop-blur-sm bg-white/10 shadow-lg"></div>
+          <div className="decorator absolute top-1/4 left-10 w-26 h-26 md:w-54 md:h-54 border-2 border-blue-400/40 rounded-3xl rotate-45 opacity-0 transition-all duration-1000 scale-75 parallax-light backdrop-blur-sm bg-white/10 shadow-lg"></div>
           <div className="decorator absolute bottom-1/3 right-10 w-20 h-20 bg-gradient-to-br from-purple-400/50 to-blue-400/50 rounded-full opacity-0 transition-all duration-1000 scale-75 parallax-heavy shadow-xl"></div>
           <div className="decorator absolute top-2/3 left-1/4 w-16 h-16 border-2 border-cyan-400/50 rotate-45 opacity-0 transition-all duration-1000 scale-75 parallax-light backdrop-blur-sm bg-gradient-to-br from-cyan-100/20 to-blue-100/20 rounded-xl shadow-md"></div>
 
